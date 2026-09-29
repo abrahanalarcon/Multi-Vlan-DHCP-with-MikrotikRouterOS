@@ -1,0 +1,11 @@
+
+configure terminal
+hostname SW1
+
+
+interface range fa0/22 - 24
+ switchport mode trunk
+ switchport trunk allowed vlan 100,200,300
+ no shutdown
+ exit
+

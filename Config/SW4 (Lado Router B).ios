@@ -1,0 +1,16 @@
+
+configure terminal
+hostname SW4
+
+! Crear VLANs
+vlan 400
+vlan 500
+vlan 600
+exit
+
+! Configurar Troncales
+interface range fastEthernet0/22 - 24
+ switchport mode trunk
+ switchport trunk allowed vlan 400,500,600
+ no shutdown
+ exit

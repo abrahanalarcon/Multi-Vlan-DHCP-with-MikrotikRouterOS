@@ -1,0 +1,23 @@
+enable
+configure terminal
+hostname SW5
+
+! Crear VLANs
+vlan 400
+vlan 500
+vlan 600
+exit
+
+! Troncal hacia SW4
+interface fastEthernet0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 400,500,600
+ no shutdown
+ exit
+
+! Puertos de acceso (Ejemplo puerto 1 en VLAN 400)
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 400
+ no shutdown
+ exit
