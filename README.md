@@ -1,7 +1,7 @@
 # Multi-Vlan-DHCP-with-Microtik
 
 Este repositorio contiene la configuración completa y documentada para un laboratorio de red que simula una topología empresarial con dos sedes (Router A y Router B), conectadas a través de un ISP simulado. El laboratorio cubre enrutamiento estático, VLANs, DHCP, NAT y configuración de switches (Trunk/Access).
-<img src="instructions.jpeg" alt="Diagrama de Topología" width="600">
+
 ![Diagrama de Topología](instructions.jpeg)
 
 ## 📋 Topología de Red
