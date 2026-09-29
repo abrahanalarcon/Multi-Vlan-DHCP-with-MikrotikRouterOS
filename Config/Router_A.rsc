@@ -1,5 +1,6 @@
 
 # 1. Asignar direcciones IP a las interfaces
+
 /ip address
 add address=10.11.0.1/30 interface=ether1 comment="WAN ISP"
 add address=10.20.0.1/30 interface=ether3 comment="Enlace a Router B"
