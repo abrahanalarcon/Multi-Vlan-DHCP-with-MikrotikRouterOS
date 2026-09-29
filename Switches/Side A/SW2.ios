@@ -1,0 +1,32 @@
+
+configure terminal
+hostname SW2
+
+vlan 100
+vlan 200
+vlan 300
+exit
+
+interface range fastEthernet0/1 -5
+switchport mode access
+switchport access vlan 100
+no shutdown
+exit
+
+interface range fastEthernet0/6 -10
+switchport mode access
+switchport access vlan 200
+no shutdown
+exit
+
+interface range fastEthernet0/11 -15
+switchport mode access
+switchport access vlan 300
+no shutdown
+exit
+
+interface range fastEthernet0/24
+switchport mode trunk
+switchport trunk allowed vlan 100,200,300
+no shutdown
+exit

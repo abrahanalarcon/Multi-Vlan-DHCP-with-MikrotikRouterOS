@@ -1,0 +1,32 @@
+
+configure terminal
+hostname SW5
+
+vlan 400
+vlan 500
+vlan 600
+exit
+
+interface range fastEthernet0/1 -5
+switchport mode access
+switchport access vlan 400
+no shutdown
+exit
+
+interface range fastEthernet0/6 -10
+switchport mode access
+switchport access vlan 500
+no shutdown
+exit
+
+interface range fastEthernet0/11 -15
+switchport mode access
+switchport access vlan 600
+no shutdown
+exit
+
+interface range fastEthernet0/24
+switchport mode trunk
+switchport trunk allowed vlan 400,500,600
+no shutdown
+exit

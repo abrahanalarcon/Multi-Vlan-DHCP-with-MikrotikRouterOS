@@ -33,21 +33,16 @@ add address=172.31.100.0/24 gateway=172.31.100.1 dns-server=10.50.0.3
 add address=172.31.200.0/24  gateway=172.31.200.1 dns-server=10.50.0.3
 add address=172.31.300.0/24 gateway=172.31.300.1  dns-server=10.50.0.3
 
-
-
 /ip dns
 set servers=10.50.0.3 allow-remote-requests=yes
 
 /ip firewall nat
 
-add chain=srcnat  action=accept dst-address-list=REDES-REMOTAS comment="NO NAT hacia redes Router B"
+add chain=srcnat action=accept dst-address-list=REDES-REMOTAS comment="NO NAT hacia redes Router B"
 add chain=srcnat action=masquerade out-interface=ether1 comment="NAT hacia ISP"
 
 /ip route
-
-/
 add dst-address=0.0.0.0/0 gateway=10.11.0.2 distance=1 comment="Default Route - ISP"
-/
 add dst-address=192.168.40.0/24 gateway=10.20.0.2 comment="VLAN 400 - Router B"
 add dst-address=192.168.50.0/24 gateway=10.20.0.2 comment="VLAN 500 - Router B"
 add dst-address=192.168.60.0/24 gateway=10.20.0.2 comment="VLAN 600 - Router B"
