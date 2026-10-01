@@ -1,0 +1,5 @@
+# MikroTik
+Routers/**/*.rsc linguist-language=RouterOS-Script
+
+# Cisco
+Switches/**/*.cfg linguist-language=INI
